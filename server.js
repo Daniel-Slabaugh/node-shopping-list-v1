@@ -25,9 +25,8 @@ app.get('/shopping-list', (req, res) => {
 });
 
 //add some recipies to the recipies object
-Recipes.create('coffee', 'water');
-{'coffee', 'water'}
-
+Recipes.create('coffee', ['coffee', 'water']);
+Recipes.create('tasty ribs', ['ribs', 'coke']);
 
 app.get('/recipes', (req, res) => {
   res.json(Recipes).get()
